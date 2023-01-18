@@ -1,0 +1,8 @@
+<div *ngIf="item" class="container w-50 border border-white text-center p-5" style="background-color: rgba(144, 120, 142, 0.778);">
+    <!-- <p class="text-white" style="font-size:large;">Are You Sure!</p> -->
+    <p class="text-white" style="font-size:large;">Do You Want To Delete?  {{item}}</p>
+        <button (click)="delete()" class="btn btn-outline-info mt-5">Yes</button> 
+         <button (click)="cancel()" class="btn btn-outline-info mt-5 ms-3">No</button>
+</div>
+
+

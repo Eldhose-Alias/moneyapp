@@ -1,0 +1,20 @@
+.container{
+    margin-top: 160px;
+}
+h2{
+    margin-bottom: 22px;
+    color: aliceblue;
+}
+.q1{
+    margin-top: -12px;
+}
+button{
+    margin-top: -2px;
+}
+p{
+    color: aliceblue;
+    text-align: center;
+}
+a{
+    color: aliceblue;
+}

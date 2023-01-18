@@ -1,0 +1,195 @@
+  data binding in angular 
+..........................
+
+   . html to ts file sharing 
+   . ts to html file sharing 
+
+    :ts == component
+    :html == view
+    methods
+   ........
+    1: one way binding
+    ..................
+       one way aayrikum, html to ts allenghi ts to html 
+
+    1.1 component to view (ts to html)
+     1.string interpollation
+     symbol="{{}}"
+
+     1.2.property binding
+     symbol=" [property]="vaue" "
+
+    2: view to component (html to ts)
+
+    1.1.event binding method 
+     symbol=(event)="method name()"
+
+    1.2 event binding using $event(dollar event)
+     symbol="(eventname)="methodname($event)" "
+
+    1.3 event using template rentering variable
+      symbol="#variable"
+    
+    2: two way binding 
+      ................
+
+   2.1 ngmodel  
+   "FormsModule" ne ullilu varunna methodanu ngmodel
+   symbol=" [(ngmodel)]="value" "
+
+
+   Redirection in angular
+   ......................
+
+   "navigateByUrl" :method used in redirection 
+   class = Router varunnath "AppRoutingModule"
+ 
+    Dependency injection
+    ....................
+    oru class nte ullilu olla method ne vere classnte ullilu use cheyan vendi
+    "to use the method of class in another class"
+
+  - cheyunath in "constructor"
+
+steps:-
+  1. access specfier : private/public =private
+  2. variable 
+  3. class name
+      eg:(private variable:Classname)
+
+      Angular Servies
+    ..................
+
+    create cheyan olla command - "ng g s data"
+
+
+    Angular Directives  - DOM nte ullilu enthelum changes varuthan vendi anu angular directives use cheyune
+  .....................
+
+  1. Structural directives - DOM nte structure ne change cheyan vendi
+
+  * to handle structured datas in view(html file) of a component 
+
+  - ngFor - directive used , can directly apply in html to access elements
+            in view of a component.
+
+  - ngIf - html nte ullilu enthelum condition check cheyan
+
+  2.Component directive - DOM nte components ne link cheyan vendi 
+
+  3.Attribute directive - 
+
+            Form Validation in Angular
+          ..............................
+
+      We can create forms in two way:
+
+      1. Template Driven Form
+
+      2. Model Driven Form
+
+       2.1 method used : Reactive Form
+                      ....................
+
+        "ReactiveFormModule" : module used to create model forms
+
+             class = "FormBuilder" - class of ReactiveFormModule          
+
+          3 things that must inside form class
+
+            group , array , control 
+
+      Validate Model Form
+    ......................
+
+    Validatoar - a class in angular it include methods for apply Validation
+
+    -access error in Validator form-
+
+    " this.registerForm.get('uname')?.errors "
+
+                      error
+                       |
+              * valid - empty response 
+    
+              * invalid - content displayed
+
+              eg:-
+
+     *ngIf="this.registerForm.get('uname')?.errors && this.registerForm.get('uname)?.touched"
+    
+
+    Local Stroage in Angular
+  ...........................
+
+- store - localStroage.setItem()
+- access - localStroage.getItem()
+- delete - localStroage.removeItem()
+
+
+    Parent Child Components communication in Angular
+   ...................................................
+
+  - @Input - Parent to Child data sharing
+
+  - @Output - Child to Parent data sharing
+
+  engane share cheyuna data selector ne ulilu maathrame call cheyan pattollu
+
+   UserDefined Events creation in Angular
+  ........................................
+
+  class - EventEmitter() - in angular core
+  emit() - to start the event 
+
+  Date && Time in Angular
+..........................
+
+Date nn parayane oru class 
+
+create an object of class Date to access Date and Time
+
+
+  Angular Pipe
+ ..............
+
+ - to transform datas into another format 
+
+ eg - Date Pipe
+
+          CLIENT SERVER INTEGRATION
+        ............................
+
+  http request creation
+........................
+
+  HttpClientModule - Module
+  HttpClient       - Class 
+  
+
+  Asynchronus request in TYPESCRIPT (TS)
+.........................................
+
+javascript - promise - resolve - then()
+                     - reject  - catch()
+
+typescript - observable - resolve - subscribe()
+                        - reject  - catch()
+
+Rxjs - library used to solve asynchronus code in ts
+    (Reactive Extention for js)
+
+ *  Append toekn in headers
+  ..........................
+steps :
+  1. create header
+    class - HttpHeaders - to create a header object
+
+    ' let headers = new HttpHeaders()
+    
+   append token in header object
+   .............................
+
+  ' headers.append('access-token' , token) '
+
+  

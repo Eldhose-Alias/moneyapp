@@ -1,0 +1,32 @@
+
+<div class="container w-25 text-center p-2" style="background-color:rgba(144, 120, 142, 0.778);">
+    <h2 class="mt-3 text-white">Register Here!</h2>
+    <form (ngSubmit)="register()" [formGroup]="registerForm">
+        <div class="mt-3">
+            <input class="form-control" formControlName="uname" name="uname" type="text" placeholder="enter the username" required />
+        </div><br>
+
+        <div *ngIf="this.registerForm.get('uname')?.errors && this.registerForm.get('uname')?.touched">
+            <p class="text-danger" style="font-weight:600; font-size: large;">incorrect username</p>
+        </div>
+
+        <div class="mt-3">
+            <input class="form-control" formControlName="acno" name="acno" type="text" placeholder="account number" required />
+        </div><br>
+
+        <div *ngIf="this.registerForm.get('acno')?.errors && this.registerForm.get('acno')?.touched">
+            <p class="text-danger" style="font-weight:600; font-size: large;">incorrect account number</p>
+        </div>
+
+        <div class="mt-3">
+            <input class="form-control" formControlName="psw" type="password" name="psw" placeholder="Password"required />
+        </div><br>
+
+        <div *ngIf="this.registerForm.get('psw')?.errors && this.registerForm.get('psw')?.touched">
+            <p class="text-danger" style="font-weight:600; font-size: large;">incorrect password</p>
+        </div>
+
+        <button type="submit" class=" btn btn-success mt-3">Register</button> <br>
+    </form>
+
+</div>
